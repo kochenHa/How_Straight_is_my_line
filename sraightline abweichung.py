@@ -136,14 +136,12 @@ best_line = linear_regression(points)
 min_avg_deviation = calculate_average_deviation(best_line, points)
 
 
+print(f"Number of Points: {len(points)}")
+print(f"Maximum deviation: {max_dist:.2f} m")
+print(f"Average deviation: {avg_dist:.2f} m")
+print(f"Best line: Start {best_line.coords[0]}, End {best_line.coords[1]}")
+print(f"minimal average deviation: {min_avg_deviation:.2f} m")
 
-
-print(f"Anzahl Punkte: {len(points)}")
-print(f"Maximale Abweichung: {max_dist:.2f} m")
-print(f"Durchschnittliche Abweichung: {avg_dist:.2f} m")
-print(f"Beste Linie: Startpunkt {best_line.coords[0]}, Endpunkt {best_line.coords[1]}")
-print(f"Minimale durchschnittliche Abweichung: {min_avg_deviation:.2f} m")
-
-visualize(points, best_line)
+# visualize(points, best_line)
 # Aufruf der Visualisierung
 visualize_on_osm(points, best_line)
